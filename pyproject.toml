@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "django-docker-template"
+version = "0.1.0"
+description = ""
+authors = ["Eugene Park <parkeugene7676@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_docker_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
