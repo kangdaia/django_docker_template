@@ -36,7 +36,10 @@ RUN poetry check
 # Install Dependencies
 RUN poetry install --no-root --no-interaction --no-cache
 
+COPY ./entrypoint.sh .
+RUN chmod +x /app/entrypoint.sh
+
 # Copy Application
 COPY . /app
 
-
+ENTRYPOINT ["/app/entrypoint.sh"]
