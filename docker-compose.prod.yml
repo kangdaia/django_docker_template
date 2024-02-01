@@ -10,7 +10,7 @@ services:
     expose:
       - 8000
     volumes:
-      - static_volume:/app/staticfiles
+      - static_volume:/app/static
 
   nginx:
     build: ./nginx
@@ -18,7 +18,7 @@ services:
     ports:
       - ${NGINX_PORT}:80
     volumes:
-      - static_volume:/app/staticfiles
+      - static_volume:/app/static
     depends_on:
       - web
 
