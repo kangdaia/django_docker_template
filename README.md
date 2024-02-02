@@ -4,11 +4,11 @@ Start a Production-Ready Dockerized Django Project
 
 
 ## requirement
-docker version 24.02
-docker-compose version 2.19
-python version 3.11
-poetry version 1.5.1
-node version 18.18 
+- docker version 24.02
+- docker-compose version 2.19
+- python version 3.11
+- poetry version 1.5.1
+- node version 18.18 
 
 ## start project
 ```
