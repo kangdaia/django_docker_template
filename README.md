@@ -12,6 +12,8 @@ node version 18.18
 
 ## start project
 ```
+poetry install
+npm install
 poetry run python manage.py runserver
 ```
 
