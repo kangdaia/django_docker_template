@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'compressor',  # new
     'home',
+    'article',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'], # new
+        'DIRS': [BASE_DIR / 'templates', 'templates'], # new
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,13 +139,17 @@ COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
 
-COMPRESS_OFFLINE = True 
+COMPRESS_OFFLINE = True
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
 ]
+
+# whitenoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

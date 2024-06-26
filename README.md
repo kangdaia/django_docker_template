@@ -25,7 +25,7 @@ docker-compose -f docker-compose.prod.yml up --build
 
 ## tailwind CLI build
 ```
-npx tailwindcss -i ./config/static/src/input.css -o ./config/static/src/output.css --watch
+npx tailwindcss -i ./config/static/css/input.css -o ./config/static/css/output.css --watch
 ```
 
 ## collect css

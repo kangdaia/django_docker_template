@@ -12,9 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django + Tailwind CSS </title>
 
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
+    {% if SETTING_TYPE == "config.settings.production" %}
+        {% compress css %}
+            <link rel="stylesheet" href="{% static 'css/output.css' %}"/>
+        {% endcompress %}
+    {% else %}
+            <link rel="stylesheet" href="{% static 'src/output.css' %}"/>
+    {% endif %}
 
 </head>
 
