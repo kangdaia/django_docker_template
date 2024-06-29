@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'compressor',  # new
     'home',
-    'article',
 ]
 
 MIDDLEWARE = [
